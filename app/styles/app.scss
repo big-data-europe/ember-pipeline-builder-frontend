@@ -9,8 +9,7 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
 @import 'materialize';
 @import 'ember-cli-materialize';
 
-[data-ember-action],
-.action-panel {
+[data-ember-action] {
     cursor: pointer;
 }
 
@@ -39,19 +38,6 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
 	color: color("grey", "base");
     }
 
-}
-
-.action-panel {
-    background-color: $secondary-color;
-    filter: alpha(opacity=60);
-    opacity: 0.6;
-    @extend .z-depth-1;
-    a {
-	color: white;
-    }
-    &:hover {
-	@extend .z-depth-1-half;
-    }
 }
 
 /** ember-sortable */

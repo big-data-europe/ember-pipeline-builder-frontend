@@ -6,5 +6,7 @@ PipelinesIndexRoute = Ember.Route.extend
   actions:
     delete: (pipeline) ->
       pipeline.destroyRecord()
+    newPipeline: ->
+      @transitionTo('pipelines.new')
 
 `export default PipelinesIndexRoute`

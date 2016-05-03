@@ -33,8 +33,8 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
 	padding: 30px 20px;
     }
 
-    &.new-step,
-    &.new-step .card-action a:not(.btn):not(.btn-large):not(.btn-floating).disabled {
+    &.new-panel,
+    &.new-panel .card-action a:not(.btn):not(.btn-large):not(.btn-floating).disabled {
 	font-style: italic;
 	color: color("grey", "base");
     }

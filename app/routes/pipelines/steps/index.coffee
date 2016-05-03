@@ -15,5 +15,7 @@ PipelinesStepsIndexRoute = Ember.Route.extend
             step.save()
     newStep: ->
       @transitionTo('pipelines.steps.new')
+    back: ->
+      @transitionTo 'pipelines.index'
       
 `export default PipelinesStepsIndexRoute`

@@ -1,4 +1,19 @@
-<h2>{{model.title}}</h2>
-<blockquote>{{model.description}}</blockquote>
+<h2>
+  {{ember-inline-edit
+  value=model.title
+  onSave=(action 'changeAttr' 'title')
+  onClose='rollback'
+  saveLabel=saveLabel
+  }}
+</h2>
+<blockquote>
+  {{ember-inline-edit
+  value=model.description
+  field='textarea'
+  onSave=(action 'changeAttr' 'description')
+  onClose='rollback'
+  saveLabel=saveLabel
+  }}
+</blockquote>
 
 {{outlet}}

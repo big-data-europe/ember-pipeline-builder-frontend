@@ -30,6 +30,7 @@
     "ember-cli-htmlbars": "^1.0.3",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-cli-inject-live-reload": "^1.4.0",
+    "ember-cli-loading-slider": "git+https://github.com/remerge/ember-cli-loading-slider#260146a9a2fc77d43078dc22492104cc75741b32",
     "ember-cli-materialize": "0.18.8",
     "ember-cli-qunit": "^1.4.0",
     "ember-cli-release": "1.0.0-beta.1",

@@ -9,6 +9,8 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
 @import 'materialize';
 @import 'ember-cli-materialize';
 
+@import 'ember-cli-loading-slider/default';
+
 [data-ember-action] {
     cursor: pointer;
 }
@@ -42,6 +44,11 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
 	color: color("grey", "base");
     }
 
+}
+
+/** ember-cli-loading-slider */
+.loading-slider > span {
+    background-color: $secondary-color;
 }
 
 /** ember-inline-edit */

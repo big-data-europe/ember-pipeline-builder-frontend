@@ -48,6 +48,11 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
 .ember-inline-edit-save {
     @extend .btn-flat;
     padding: 0;
+    color: color("green", "accent-4");
+
+    &:focus {
+	background-color: transparent;
+    }
 }
 
 /** ember-sortable */

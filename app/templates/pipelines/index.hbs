@@ -15,9 +15,12 @@
     </span>
 
     {{#each model as |pipeline|}}
-      {{#md-card title=pipeline.title}}
+      {{#md-card}}
 	{{#md-card-content}}
-	  {{pipeline.description}}
+	  <span class="card-title black-text">
+	    {{inline-edit-model model=pipeline attr='title'}}
+	  </span>
+	  {{inline-edit-model model=pipeline attr='description' field='textarea'}}
 	{{/md-card-content}}
 	{{#md-card-action}}
 	  {{#link-to 'pipelines.steps' pipeline}}Edit{{/link-to}}

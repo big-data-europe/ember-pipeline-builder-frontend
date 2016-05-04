@@ -5,11 +5,32 @@
     {{#sortable-group tagName="div" onChange="reorderSteps" as |group|}}
       {{#each sortedSteps as |step|}}
 	{{#sortable-item tagName="div" model=step group=group spacing=15}}
-	  {{#md-card title=step.title}}
+	  {{#md-card}}
 	    <span class="dragable"><i class="material-icons">swap_vert</i></span>
-	    {{md-badge text=step.code}}
+	    <span class="badge">
+	      {{ember-inline-edit
+	      value=step.code
+	      onSave=(action 'changeAttr' step 'code')
+	      onClose=(action 'rollback' step)
+	      saveLabel=saveLabel
+	      }}
+	    </span>
 	    {{#md-card-content}}
-	      {{step.description}}
+	      <span class="card-title black-text">
+		{{ember-inline-edit
+		value=step.title
+		onSave=(action 'changeAttr' step 'title')
+		onClose=(action 'rollback' step)
+		saveLabel=saveLabel
+		}}
+	      </span>
+	      {{ember-inline-edit
+	      value=step.description
+	      field='textarea'
+	      onSave=(action 'changeAttr' step 'description')
+	      onClose=(action 'rollback' step)
+	      saveLabel=saveLabel
+	      }}
 	    {{/md-card-content}}
 	    {{#md-card-action}}
 	      <a {{action 'delete' step}}>Delete</a>

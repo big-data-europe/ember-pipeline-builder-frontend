@@ -19,6 +19,10 @@ $card-link-color-light: lighten($secondary-color, 20%) !default;
 	background-color: $badge-bg-color;
 	color: white;
 	top: 15px;
+
+	i {
+	    color: white;
+	}
     }
 
     .dragable {

@@ -2,7 +2,11 @@
 
 PipelinesIndexRoute = Ember.Route.extend
   model: ->
-    @store.findAll 'pipeline'
+    @store.query 'pipeline', {
+      page:
+        size: 10000
+      sort: 'title'
+    }
   actions:
     delete: (pipeline) ->
       pipeline.get('steps').then (steps) =>

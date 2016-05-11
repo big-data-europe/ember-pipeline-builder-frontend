@@ -31,6 +31,7 @@ module.exports = {
         zip.addLocalFolder( path.join(project.root, "dist"), "dist" );
         zip.writeZip( path.join(project.root, "dist.zip") );
         console.log('[TODO] Please upload ' + path.join(project.root, "dist.zip") + ' to the GitHub release once the tag is pushed and maybe trigger the build on hub.docker.com again.');
+	success();
       }, failure );
     });
   }

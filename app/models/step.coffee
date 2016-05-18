@@ -6,6 +6,9 @@ Step = DS.Model.extend HasManyQuery.ModelMixin,
   description: DS.attr('string')
   code: DS.attr('string')
   order: DS.attr('number')
+  status: DS.attr('string',
+    defaultValue: () -> 'not_started'
+  )
 
   pipeline: DS.belongsTo('pipeline')
   

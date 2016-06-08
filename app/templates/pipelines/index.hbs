@@ -9,6 +9,7 @@
       {{/md-card-content}}
       {{#md-card-action}}
 	<a class="disabled">Edit</a>
+	<a class="disabled">Export</a>
 	<a class="disabled">Delete</a>
       {{/md-card-action}}
     {{/md-card}}
@@ -24,6 +25,7 @@
 	{{/md-card-content}}
 	{{#md-card-action}}
 	  {{#link-to 'pipelines.steps' pipeline}}Edit{{/link-to}}
+	  <a {{action 'export' pipeline}}>Export</a>
 	  <a {{action 'delete' pipeline}}>Delete</a>
 	{{/md-card-action}}
       {{/md-card}}

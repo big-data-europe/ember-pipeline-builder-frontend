@@ -1,6 +1,6 @@
 {
   "name": "pipeline-builder",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Application to build and export Big Data pipelines",
   "private": true,
   "directories": {

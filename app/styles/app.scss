@@ -1,4 +1,6 @@
 @import 'components/color';
+// Fix for Roboto font path
+$roboto-font-path: '../assets/';
 
 $primary-color: color("blue-grey", "lighten-1");
 $secondary-color: color("pink", "accent-4");

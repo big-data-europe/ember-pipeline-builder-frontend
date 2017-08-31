@@ -20,8 +20,7 @@ const PipelinesIndexRoute = Ember.Route.extend({
       });
     },
     export(pipeline) {
-      let request;
-      return request = Ember.$.ajax({
+      return Ember.$.ajax({
         url: "/export/pipelines",
         type: "GET",
         headers: {
@@ -41,7 +40,8 @@ const PipelinesIndexRoute = Ember.Route.extend({
             // for which they were created. These URLs will no longer resolve as the data backing
             // the URL has been freed."
             return window.navigator.msSaveBlob(blob, filename);
-          } else {
+          } 
+          else {
             const URL = window.URL || window.webkitURL;
             const downloadUrl = URL.createObjectURL(blob);
 

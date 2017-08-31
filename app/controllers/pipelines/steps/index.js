@@ -6,7 +6,7 @@ const PipelinesStepsIndexController = Ember.Controller.extend({
   saveLabel: Ember.String.htmlSafe("<i class='material-icons'>done</i>"),
   actions: {
     reorderSteps(steps, draggedStep) {
-      return steps.forEach(function(step, i) {
+      return steps.forEach((step, i) => {
         step.set('order', i);
         return step.save();
       });

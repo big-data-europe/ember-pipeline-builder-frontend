@@ -4,10 +4,9 @@ const PipelinesStepsNewRoute = Ember.Route.extend({
   model() {
     const pipeline = this.modelFor('pipelines.steps');
     return this.store.createRecord('step', {
-      order: pipeline.get('steps.length'),
-      pipeline
-    }
-    );
+        order: pipeline.get('steps.length'),
+        pipeline
+    });
   },
   actions: {
     save() {
